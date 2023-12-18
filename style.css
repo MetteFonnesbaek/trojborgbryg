@@ -1,0 +1,529 @@
+/* -----------------------------------------------
+                  varibles
+----------------------------------------------- */
+:root {
+    --beige: #F5F2EC;
+    --green: #6C8E80;
+    --yellow: #FBD530;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+/* -----------------------------------------------
+                        Reset
+  ----------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* -----------------------------------------------
+                        Basics
+  ----------------------------------------------- */
+body {
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--beige);
+}
+
+main {
+    padding-top: 150px;
+}
+
+h1 {
+    font-family: 'Mina';
+    font-size: 3.75rem;
+    color: var(--black);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    padding: 5px;
+}
+
+h2 {
+    font-family: 'Mina';
+    font-size: 2.188rem;
+    color: var(--black);
+    text-align: center;
+    font-weight: 400;
+}
+.h2_bold {
+    font-weight: bolder;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 1.25rem;
+    color: var(--black);
+    margin: 30px;
+    line-height: 30px;
+}
+
+li {
+    font-family: 'Mina';
+    font-size: 1.8rem;
+}
+
+/* -----------------------------------------------
+                        Header
+  ----------------------------------------------- */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: var(--beige);
+}
+
+.logo {
+    width: 6.25rem;
+}
+
+.nav__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    right: 0;
+}
+
+i {
+    color: var(--green);
+    font-size: 5rem;
+}
+
+#close {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+#menu {
+    margin-top: 0.5rem;
+}
+
+.nav__checkbox {
+    display: none;
+}
+
+.nav__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 1rem;
+}
+
+li {
+    list-style: none;
+    display: none;
+}
+
+li:first-child {
+    margin-right: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#nav__checkbox:checked~ul.nav__menu li {
+    display: block;
+}
+
+#nav__checkbox:checked~label.nav__toggle #close {
+    display: block;
+}
+
+#nav__checkbox:checked~label.nav__toggle #menu {
+    display: none;
+}
+
+/* -----------------------------------------------
+                        Forside
+  ----------------------------------------------- */
+.forside_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.alkoholfriol {
+    background-image: url(img/oelflasker.webp);
+    background-size: cover;
+    padding: 80px 0;
+    margin: 30px;
+    border-radius: 5px;
+    position: relative;
+    isolation: isolate;
+}
+.alkoholfriol::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--beige);
+    opacity: 50%;
+}
+
+.arrangementer {
+    background-image: url(img/oelsmagning.webp);
+    background-size: cover;
+    padding: 80px 0;
+    margin: 30px;
+    border-radius: 5px;
+    position: relative;
+    isolation: isolate;
+}
+.arrangementer::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--beige);
+    opacity: 50%;
+}
+
+.omos {
+    background-image: url(img/omos1.webp);
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    margin: 30px;
+    border-radius: 5px;
+    position: relative;
+    isolation: isolate;
+}
+.omos::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--beige);
+    opacity: 50%;
+}
+
+/* -----------------------------------------------
+                    Alkoholfri øl
+  ----------------------------------------------- */
+.varianter_flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.varianter_img {
+    width: 80%;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.varianter_h2 {
+    padding-top: 20px;
+}
+
+.anledning_h2 {
+    padding-top: 50px;
+}
+
+/* -----------------------------------------------
+                    Arrangementer
+  ----------------------------------------------- */
+.arrangementer_h1 {
+    font-size: 3.125rem;
+}
+
+.arrangementer_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.arrangementer_p {
+    text-align: center;
+}
+
+.olsmagning {
+    background-image: url(img/oelsmagning.webp);
+    background-size: cover;
+    background-position: center;
+    margin: 30px;
+    padding-top: 10px;
+    border-radius: 5px;
+    position: relative;
+    isolation: isolate;
+}
+
+.olsmagning::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--beige);
+    opacity: 80%;
+}
+
+.brygselv {
+    background-image: url(img/brygselv.webp);
+    background-size: cover;
+    background-position: center;
+    padding-top: 10px;
+    margin: 30px;
+    border-radius: 5px;
+    position: relative;
+    isolation: isolate;
+}
+
+.brygselv::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--beige);
+    opacity: 80%;
+}
+
+.button {
+    background-color: var(--green);
+    color: var(--beige);
+    padding: 5px;
+    text-align: center;
+    display: block;
+    font-family: 'Mina';
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 20px auto;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* -----------------------------------------------
+                        Om os
+  ----------------------------------------------- */
+.img_omos1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.img_omos2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+/* -----------------------------------------------
+                        Footer
+  ----------------------------------------------- */
+footer {
+    background-image: url(img/forside1.webp), url(img/forside2.webp);
+    background-size: 300%;
+    background-repeat: no-repeat, repeat;
+    position: relative;
+    isolation: isolate;
+}
+footer::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--beige);
+    opacity: 10%;
+}
+
+.footer_flex {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_content{
+    padding-bottom: 40px;
+}
+
+/* SOME iconer */
+.some_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.some_icon {
+    width: 50%;
+}
+
+.div_map {
+    text-align: center;
+}
+
+.iframe_map {
+    border-radius: 5px;
+    border: 0;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+}
+
+.allrightstext {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 5px;
+}
+
+/* -----------------------------------------------
+                      MEDIA QUERIRS 
+  ----------------------------------------------- */
+@media only screen and (min-width: 768px) {
+    /* -------- Basics -------- */
+    p {
+        margin: 30px;
+    }
+
+    /* -------- Alkoholfri øl -------- */
+    .varianter_flexbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .varianter_img {
+        width: 40%;
+    }
+
+    /* -------- Arrangementer -------- */
+    .arrangementer_flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .olsmagning {
+        width: 40%;
+        margin: 30px 15px 30px 30px;
+    }
+
+    .brygselv {
+        width: 40%;
+        margin: 30px 30px 30px 15px;
+    }
+
+    /* -------- Footer -------- */
+    footer{
+        background-size: 150%;
+    }
+
+    .footer_flex {
+        padding-top: 250px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* -------- Basics -------- */
+    
+    h2 {
+        font-size: 45px;
+    }
+
+    p {
+        font-size: 1.875rem;
+        line-height: 50px;
+        padding: 0 45px;
+    }
+
+    /* -------- Navmenu -------- */
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        flex-direction: row;
+    }
+
+    li {
+        display: block;
+        margin: 0 2.5rem;
+    }
+
+    li:hover {
+        color: var(--green);
+    }
+
+    .logo {
+        width: 9.375rem;
+    }
+
+    /* -------- Forside -------- */
+    main {
+        padding-top: 200px;
+    }
+
+    .forside_flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .alkoholfriol {
+        width: 350px;
+    }
+
+    .arrangementer {
+        width: 350px;
+    }
+
+    .omos {
+        width: 350px;
+    }
+
+
+    /* -------- Alkoholfri øl -------- */
+    .varianter_img {
+        width: 20%;
+    }
+
+    /* -------- Arrangementer -------- */
+    .arrangementer_h1 {
+        font-size: 3.75rem;
+    }
+
+    /* -------- Om os -------- */
+    .img_omos1 {
+        max-width: 60%;
+    }
+
+    .img_omos2 {
+        max-width: 50%;
+    }
+
+    /* -------- Footer -------- */
+    footer {
+        background-size: 100%;
+    }
+    
+    .footer_flex {
+        padding-top: 350px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .allrightstext {
+        font-size: 1rem;
+        margin: 0;
+    }
+}
